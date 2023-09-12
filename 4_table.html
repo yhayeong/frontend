@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- th는 글씨가 진한 td(컬럼) -->
+    <table border="1">
+        <thead> <!-- thead와 tbody는 생략해도 자동삽입된다(계층관계 주의) -->
+            <tr>
+                <th></th> <!--다른 행들과 컬럼 개수 맞추기-->
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1교시</td>
+                <td>영어</td>
+                <td>국어</td>
+                <td>과학</td>
+                <td>미술</td>
+                <td>기술</td>
+            </tr>
+            <tr>
+                <td>2교시</td>
+                <td>영어</td>
+                <td>국어</td>
+                <td>과학</td>
+                <td>미술</td>
+                <td>기술</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- 테이블의 행/열 병합
+        rowspan : 행 병합
+        colspan : 열 병합 -->
+    <table border="1">
+        <tr>
+            <th colspan="2">지역별 홍차</th> <!--1행인데 1,2열을 합침-->
+        </tr>
+        <tr>
+            <th rowspan="3">중국</th> <!--2행1열인데 아래1열들을 3행 합침-->
+            <td>정산소종</td> <!--2행2열-->
+        </tr>
+        <tr>
+            <td>기문</td> <!--3행2열-->
+        </tr>
+        <tr>
+            <td>운남</td> <!--4행2열-->
+        </tr>
+
+        <tr>
+            <th rowspan="4">인도 및 스리랑카</th>
+            <td>아삼</td>
+        </tr>
+        <tr>
+            <td>실론</td>
+        </tr>
+        <tr>
+            <td>다즐링</td>
+        </tr>
+        <tr>
+            <td>닐기리</td>
+        </tr>
+
+    </table>
+
+
+</body>
+</html>

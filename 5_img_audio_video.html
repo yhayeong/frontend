@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 이미지, 오디오, 비디오 -->
+
+    <img src="flower1.jpg" alt="꽃사진" width="300"><br>
+    <audio src="Kalimba.mp3" controls="controls"></audio><br>
+    <!-- <video src="Wildlife.mp4" type="video/mp4" controls="controls" width="300"></video> -->
+    <video controls="controls" width="300" poster="http://placehold.it/320x180"> <!--까만화면이 아닌 정지화면poster를 지정할수있다-->
+        <source src="Wildlife.mp4" type="video/mp4">
+        <source src="Wildlife.webm" type="video/webm"> <!--위에있는 파일이 지원이 안되면 아래파일로 대체-->
+    </video>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+
+            <tr>
+                <!-- input태그는 label과 같이 쓴다 -->
+                <td><label for="username">이름</label></td> <!--for는 id가 username인 태그에 대한 라벨임을 표시-->
+                <td><input type="text" id="username" name="username"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" id="man" value="m" name="gender">
+                    <label for="man">남자</label>
+                    <input type="radio" id="woman" value="w" name="gender">
+                    <label for="woman">여자</label>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="가입">
+    </form>
+</body>
+</html>

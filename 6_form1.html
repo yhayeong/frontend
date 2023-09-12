@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="test.html">
+        <input type="text" name="id"><br>
+        <input type="password" name="pass"><br>
+        <input type="file" name="file"><br>
+
+        <input type="checkbox" name="hobby" value="book">독서 
+        <input type="checkbox" name="hobby" value="music">음악 <br>
+
+        <!-- radio input태그 두개의 name을 통일하면 둘중 하나만 선택됨 -->
+        <input type="radio" name="gender" value="male">남 
+        <input type="radio" name="gender" value="female">여 <br>
+
+        <input type="button" value="버튼"><br>
+        <input type="submit"><br>
+        <input type="submit" value="로그인"><br>
+
+        <!-- rest input을 누르면 form 태그 안의 모든 것이 초기화됨 -->
+        <input type="reset" value="다시"><br>
+
+        <input type="image" src="https://placehold.it/100x100"><br>
+    </form>
+</body>
+</html>
+
+
+<!-- 
+http://127.0.0.1:5500/
+test.html
+?id=ggggg
+&pass=eeeeee
+&file=04_case.sql
+&hobby=music
+&gender=female
+ -->
