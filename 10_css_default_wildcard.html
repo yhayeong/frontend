@@ -17,21 +17,23 @@
         }
         #wrap {
             background-color: pink;
-            width: 800px;
+            width: 500px;
+            height: 100px;
             margin: 0 auto;
-            overflow: hidden;
+            /* overflow: hidden; */
+            overflow: scroll;
+            /* overflow를 hidden으로 하면 밖태그의 크기를 넘치는 안태그는 감춰지게함 
+                        scroll로 하면 스크롤로 보여지게함 */
         }
         #aside {
             width: 200px;
             background-color: gold;
             float: left; 
         }
-
         #content {
             width: 600px;
             background-color: green;
-            float: left; 
-            /* 블럭태그를 옆으로 배치하고자할때 사용 */
+            float: left; /* 블럭태그를 옆으로 배치하고자할때 사용 */
         }
     </style>
 </head>

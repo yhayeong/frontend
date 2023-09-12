@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #header의 자식인 h1 (후손x) */
+        #header > h1 { color: red; }
+        #section > h1 { color: orange; }
+        
+        /* #header의 후손인 h2  */
+        #header h1 { color: blue; }
+
+        /* tbody는 생략해도 자동삽입되므로 선택자에서 주의하도록 한다 */
+        /* table>tr>th { color: pink; } */
+        table>tbody>tr>th { color: pink; }
+
+        /* table tr>th { color: pink; }  */
+        /* 이건 테이블의 모든 후손인  tr의 자식 th를 선택하는 것 */
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Lorem ipsum sit amet, consectetur adipsiscing dlit.</p>
+    </div>
+
+
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>지역</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>서울시 금천구 호서대벤처타워</td>
+        </tr>
+    </table>
+
+</body>
+</html>

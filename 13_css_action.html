@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  반응선택자 */
+        h1:hover { 
+            color : white; 
+            background: black;
+        }
+        h1:active {
+            color : orange;
+            background: lightgoldenrodyellow
+        }
+
+        /* 상태 선택자 */
+        input:enabled { background: lightskyblue; }
+        input:disabled { background: lightpink; }
+        input:focus { background: lightgreen; }
+    </style>
+</head>
+<body>
+    <h1>반응 선택자</h1>
+
+
+    <!-- 상태 선택자 -->
+    <input type="text">
+    <input type="text" disabled value="고정 출력 데이터"> 
+</body>
+</html>
