@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제3</title>
+    <style>
+        div.container {
+            border: 1px solid red; 
+
+            /* (1) */
+            display: flex;
+            /* 자식요소들이 옆으로 나란히 배치되고, 부모요소의 너비는 body영역 너비만큼 다 차지 */
+            /* display: inline-flex; */
+            /* 자식요소들이 옆으로 나란히 배치되고, 자식요소들이 차지하는 만큼으로 부모요소의 크기가 정해짐 */
+            
+            /* (2) */
+            /* flex-direction: column; */
+            /* 자식요소들이 세로배치됨 */
+            flex-direction: row;
+            /* 자식요소들이 가로배치됨 */
+
+            /* (3) */
+            /* flex-wrap: wrap; */
+            /* 브라우저 창의 너비를 줄였을때 넘치는 요소가 아래로 내려감 */
+            flex-wrap: nowrap;
+            
+            /* (4) */
+            /* justify-content: center; */
+            justify-content: space-evenly;
+            /* justify-content: space-around; */
+            /* justify-content: flex-end; */
+
+            /* 자식요소들을 부모 영역 안에서 배분한다
+            flex-start가 기본
+            display:inline-flex라면 justify-content할 남는 영역 자체가 없기 때문에 display:flex일때 함께 주는 속성임 */
+        }
+
+        div.item { 
+            margin: 3px; 
+            padding: 10px;
+            border: 1px solid black; 
+        }
+
+
+        div.container2 {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid orange; 
+
+            /* (5) */
+            align-items: center;
+            /* 자식요소들을 수직중앙정렬 */
+        }
+        .item2 { 
+            border: 1px solid lightskyblue; 
+            width: 150px;
+        }
+        
+        
+        div.container3 {
+            display: flex;
+            border: 1px solid black; 
+        }
+        .item3 {
+            /* (6) */
+            /* flex-grow: 1; */
+            border: 1px solid black; 
+        }
+
+        /* .item3:nth-child(1){
+            flex-grow: 1;
+        }
+        .item3:nth-child(2){
+            flex-grow: 2;
+        }
+        .item3:nth-child(3){
+            flex-grow: 1;
+        } */
+        /* 1:2:1 즉 4분의1, 4분의2, 4분의1 비율로 아이템을 배분 */
+
+        .item3:nth-child(1){
+            flex-shrink: 0;
+            width: 100px;
+        }
+        .item3:nth-child(2){
+            flex-grow: 2;
+        }
+        .item3:nth-child(3){
+            flex-grow: 1;
+        }
+        /* 고정크기인 1st자식요소를 제외한 나머지 요소끼리 2:1 즉 3분의2, 3분의1 비율로 아이템을 배분 */
+        
+
+        /* <정리>
+        [1]
+        justify-content -> 자식요소의 수평정렬 값 선택
+        align-items -> 자식요소의 수직정렬 값 선택
+
+        [2]
+        인라인태그인 라벨은 원래 width:150px가 안먹혀야하지만,
+        부모인 container2가 flex타입으로 지정되어있으므로
+        자식요소들은 가로세로 크기 지정이 가능하기 때문이다.
+        */
+    </style>
+</head>
+<body>
+    <!-- flex -->
+    <div class="container">
+        <div class="item">Hello flex1 Hello flex Hello flex</div>
+        <div class="item"> Flex2</div>
+        <div class="item">Hello flex3 Hello flex Hello flex</div>
+    </div>
+
+    <br><hr><br>
+    <div class="container2">
+        <label class="item2">lavel</label>
+        <h3 class="item2">hong gil dong</h3>
+        <p class="item2">seoul gumcheonseoul gumcheon</p>
+        <h1 class="item2">title</h1>
+    </div>
+    
+    <br><hr><br>
+    <div class="container3">
+        <div class="item3">아이템</div>
+        <div class="item3">아이템mmmmmmmm</div>
+        <div class="item3">아이템mmm</div>
+    </div>
+
+    <br><hr><br>
+    <div class="container4">
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+    </div>
+
+
+</body>
+</html>
