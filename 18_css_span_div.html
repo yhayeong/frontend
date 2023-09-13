@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1 {
+            display: inline;
+            /* 원하는 배치를 위해 영역타입이 블럭인 div를 인라인으로 바꿈 */
+            
+            display: inline-block;
+            /* 원하는 배치를 위해 영역타입이 블럭인 div를 인라인으로 바꿈 
+                & 크기 지정도 가능하게 함*/
+            
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        .span1 {
+            /* display: block; */
+            display: inline-block;
+
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+        /* 블럭태그를 옆으로 배치하는 두가지 방법
+        1) float : left;
+        자기자신의 (오른쪽)옆에 올 대상을 옆으로 배치되게하기 주는 속성
+
+        2) display: inline-block;
+        자기자신의 상태를 인라인(옆으로오는) 블럭(크기지정가능)으로 함
+        */
+    </style>
+</head>
+<body>
+    <span>더미 객체</span>
+    <div id="box">대상 객체</div>
+    <span>더미 객체</span>
+
+    <hr>
+
+    <span>더미 객체</span>
+    <span style="width: 100px; height: 100px; background-color: red;">더미 객체</span>
+    <div id="box" style="width: 100px; height: 100px; background-color: blue;">대상 객체</div>
+    /* img태그 등이 직접적으로 가진 width, height속성과는 다르다. 스타일 속성을 통해야한다.
+    span태그는 안 먹힌다 */
+
+    <hr>
+    
+    <!--  -->
+    <span class="span1">스팬</span>
+    <div id="div1">디아이브이</div>
+    <span class="span1">스팬</span>
+
+</body>
+</html>

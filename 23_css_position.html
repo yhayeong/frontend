@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 0단계 */
+        .box { 
+            width: 100px; height: 100px; 
+
+            position: absolute; 
+        }
+
+
+        /* 1단계-1 */
+        /* 세 박스 모두 시작점(0,0)좌표에서 그려져서 겹치게됨 */
+        /* .box:nth-child(1) { background-color: red; }
+        .box:nth-child(2) { background-color: green; }
+        .box:nth-child(3) { background-color: blue; } */
+        
+        /* 1단계-2 */
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px; top: 10px; 
+            /* 시작점에서 10px */
+
+            z-index: 3;
+        }
+        .box:nth-child(2) {
+            background-color: green;
+            left: 50px; top: 50px;
+
+            z-index: 1;
+        }
+        .box:nth-child(3) {
+            background-color: blue;
+            left: 90px; top: 90px;
+
+            z-index: 2;
+        }
+
+
+        /* 2단계 */
+        /* 큰 div만 선택하기 */
+        body>div {
+            border: 3px solid black;
+
+            position: relative;
+            /* 부모에 상대적 속성을 주니까 자식의 position: absolute; 속성으로 인한 시작위치가 (0,0)이 아니라 부모의 시작점이 된다 */
+            
+            width: 400px;
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor amet</h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor amet</h1>
+</body>
+</html>
+
+
+<!-- 
+position: absolute; 일때 left: 10px; top: 10px; -> 0,0에서 시작하여 10px만큼 
+그렇지 않으면 부모위치에서 시작
+
+z-index 값이 큰 태그가 (레이어 개념)위로 올라온다
+
+어떤요소에 절대적위치를 지정하고싶어서 position: absolute;하면 기본적으로 body안에서의 절대적위치가 되고
+, 부모를 기준으로 하고자한다면 부모에 position: relative;를 주어야함
+-->

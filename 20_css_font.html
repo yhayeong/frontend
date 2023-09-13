@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 폰트 사이즈와 폰트 패밀리 */
+        .a { font-size: 32px; } 
+        .b { font-size: 2em; } /* 두 배(기본사이즈는 16px) */
+        .c { font-size: large; } /* 기본보다 약간민 크게 */
+        .d { font-size: small; }
+
+        .font_arial { font-family: '없는 폰트', 'JetBrains Mono NL'; }
+        .font_roman { font-family: 'Times New Roman', Arial; } /* 폰트명에 공백 포함시 작은따옴표로 묶을것 */
+
+        .font_big { font-size: 2em; }
+        .font_italic { font-style: italic; }
+        .font_bold { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum-h1</h1>
+    <p class="a">Lorem ipsum-32px</p>
+    <p class="b">Lorem ipsum-2em</p>
+    <p class="c">Lorem ipsum-large</p>
+    <p>Lorem ipsum</p>
+    <p class="d">Lorem ipsum-small</p>
+
+    <hr>
+    <h1 class="font_arial">Lorem ipsum</h1>
+    <p class="font_roman">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br>
+    <p class="font_big font_italic font_bold">Lorem ipsum dolor amet</p>
+</body>
+</html>

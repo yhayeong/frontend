@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        #div1 {
+            background: pink;
+            border: 20px solid black;
+            margin: 10px;
+            padding: 30px;
+        }
+        /* width, height가 같은 두 div의 실제크기를 눈으로 확인할것 */
+        
+        
+        #div2 {
+            background: skyblue;
+            margin: 0 30px 0 30px;
+            padding: 0 30px 0 30px;
+        }
+
+        #div3 {
+            background: seashell;
+            border-width: thick;
+            border-style: double;
+            border-color: black;
+
+            /* 넘치지 않게 자르기 */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <div id="div3">
+        <h1>Lorem ipsum dolor sit amet</h1>
+    </div>
+</body>
+</html>
+
+
+<!-- 
+width와 height 값이 padding과 border 영역을 포함하는 방법 - box-sizing: border-box;
+https://sirius7.tistory.com/6
+
+-->

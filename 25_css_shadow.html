@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body>h1 {
+            text-shadow: 5px 5px 5px black;
+        }
+
+        div {
+            width: 300px;
+            height: 70px;
+            margin-bottom: 20px;
+            padding: 10px 30px;
+            background: lightblue;
+        }
+
+        /* 
+        box-shadow/text-shadow: x-position y-position blur spread color | inset | initial | inherit
+
+        설정값 순서대로
+        (1) x-position: 가로 위치로서 양수면 오른쪽, 음수면 왼쪽에 그림자가 만들어진다(필수)
+        (2) y-position: 세로 위치로서 양수면 하단, 음수면 상단에 그림자가 만들어진다(필수)
+        (3) blur: 그림자를 흐릿하게함. 값이 클수록 흐려짐
+        (4) spread: 양수면 그림자 확장하고 음수면 축소됨 
+        (5) inset: 그림자를 요소 안쪽에 만든다
+        (6) initial: 기본값으로 설정한다
+        (7) inherit: 부모요소의 값을 상속한다 */
+        .a {
+            box-shadow: 5px 5px;
+            text-shadow: 5px 5px 5px red, 5px 5px 5px blue;
+        }
+        .b {
+            box-shadow: 5px 5px 10px;
+            text-shadow: 5px 5px 5px yellow;
+        }
+        .c {
+            box-shadow: 5px 5px 5px 5px;
+        }
+        .e {
+            box-shadow: 5px 5px 5px 5px gray inset;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor amet</h1>
+
+    <div class="a"><h1>aaaaaaaaaaaaaaaa</h1></div>
+    <div class="b">bbbbbbbbbbbbbbbbbbbb</div>
+    <div class="c">cccccccccccccccccccc</div>
+    <div class="d">dddddddddddddddddddd</div>
+    <div class="e">eeeeeeeeeeeeeeeeeeee</div>
+</body>
+</html>
