@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹</title>
+    <style>
+        /* @media(max-width:449px) {
+            body { background: red; }
+        } */
+        /* 너비 449까지는 빨강(개발자도구 열어서 화면이 작아지면 적용됨) */
+        /* @media(min-width:500px) and (max-width:799px) {
+            body { background: green; }
+        } */
+        /* 너비 500~799 사이는 초록 */
+        /* @media(min-width:800px) {
+            body { background: blue; }
+        } */
+
+        @media screen and (orientation:portrait) {
+            body {
+                background: cyan;
+            }
+        }
+        @media screen and (orientation:landscape) {
+            body {
+                background: blueviolet;
+            }
+        }
+        
+        /* screen: 디바이스(모바일 / pc...)를 의미
+        반응형웹css를 통해 body색만 바꾸는것이 아니라 다르게 디자인된 페이지를 보여주도록 제어할수있다 
+        그러나 코드가 쉽지 않다
+        
+        모바일에서 접속했는지 데스크탑에서 접속했는지를 알 수 있기 때문에 백엔드가 요청 받았을때 분기해줄 수 있다 
+        그러므로 반응형웹보다는 데탑용/모바일용 페이지를 분리해서 'Service'를 분리하는 것이 낫다. */
+
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aperiam eum doloribus atque dolor quos quasi, dolore deleniti omnis est rem dolores natus, iste tenetur aliquam distinctio officiis quidem. Eius.</p>
+
+</body>
+</html>

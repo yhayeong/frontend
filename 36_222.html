@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포스터 만들기</title>
+    <style>
+        /* 예제7 */
+        
+        body {
+            width: 500px;
+            height: 800px;
+        }
+        .top_bar {
+            background: rgb(255, 187, 0);
+            height: 100px;
+            position: fixed;
+            left:0; top:0; right:0;
+
+        }
+        #title {
+            font-size: 50px;
+        }
+        .top_bar div:not(:last-child) { 
+            color: white;
+            text-align: center;
+        }
+        .bottom_bar {
+            background: rgb(55, 55, 131);
+            position: fixed;
+            left:0; bottom:0; right:0; 
+        }
+
+
+        .container {
+            margin-top: 50px;
+            margin-left: 50px;
+            display: flex;
+        }
+        .left_bar {
+            background: skyblue;
+            /* width: 50px; */
+            flex-grow: 1;
+            position: fixed;
+            left:0; top:52px; bottom:0;
+        }
+        .content {
+            background: lightgray;
+            /* width: 50px; */
+            flex-grow: 2;
+            position: fixed;
+            left:0; top:52px; bottom:0;
+        }
+        .right_bar {
+            background: skyblue;
+            /* width: 50px; */
+            flex-grow: 1;
+            position: fixed;
+            right:0; top:52px; bottom:0;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <div class="top_bar">
+        <div id="title">Musee dOrsay</div>
+        <div id="subtitle">Musee dOrsay Musee dOrsay Musee dOrsay Musee dOrsay Musee dOrsay</div>
+        <div id="subsubtitle">RoyalAcademy of Arts, THE REAL VANGOGH THE ARTIST AND HIS LEFTERS</div>
+    </div>
+    <div class="container">
+        <div class="left_bar">
+            <div id="artist">ARTIST</div>
+            <div><ins>작가의 작품</ins></div>
+            <div><ins>작가의 시대</ins></div>
+            <div><ins>작가의 일생</ins></div>
+        </div>
+        <div class="content">
+            <div id="artist">ARTIST</div>
+            <div><ins>작가의 작품</ins></div>
+            <div><ins>작가의 시대</ins></div>
+            <div><ins>작가의 일생</ins></div>
+        </div>
+        <div class="right_bar">
+            <div id="artist">ARTIST</div>
+            <div><ins>작가의 작품</ins></div>
+            <div><ins>작가의 시대</ins></div>
+            <div><ins>작가의 일생</ins></div>
+        </div>
+    </div>
+    <div class="bottom_bar">바닥글</div>
+
+
+
+    <!-- <div class="container">
+        <div class="top">
+            <div id="title">Musee dOrsay</div>
+            <div id="subtitle">Musee dOrsay Musee dOrsay Musee dOrsay Musee dOrsay Musee dOrsay</div>
+        </div>
+        <div id="subsubtitle">RoyalAcademy of Arts, THE REAL VANGOGH THE ARTIST AND HIS LEFTERS</div>
+        <div class="middle">
+            <div class="left">
+                <div id="artist">ARTIST</div>
+                <div><ins>작가의 작품</ins></div>
+                <div><ins>작가의 시대</ins></div>
+                <div><ins>작가의 일생</ins></div>
+            </div>
+            <div class="center">가운데</div>
+            <div class="right">오</div>
+        </div>
+        <div class="bottom">바텀</div>
+    </div> -->
+</body>
+</html>

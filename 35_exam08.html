@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제8</title>
+    <style>
+        h1,p {
+            width: 300px;
+        }
+        .ellipsis {
+            white-space: nowrap;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* overflow를 주면 width를 넘어가면 내용이 짤리는데 짤릴때 ... 으로 표시 */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi natus soluta, error facilis doloremque, alias magnam quis, ipsum amet praesentium nihil quos. Quidem possimus saepe, laudantium assumenda inventore fugiat incidunt!</h1>
+    <p class="ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsam dolorum a. Illo assumenda ratione temporibus voluptates reiciendis suscipit doloribus reprehenderit nobis, quibusdam animi, voluptas placeat quam est voluptatibus autem.</p>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포스터 만들기</title>
+    <style>
+        #box {
+            border: 1px solid gray;
+            width: 500px;
+            height: 800px;
+        }
+        .top_bar {
+            height: 100px;
+            background: rgb(255, 187, 0);
+            text-align: center;
+
+            position: fixed;
+            left:0; top:0; right:0;
+        }
+        .top_bar div:not(:last-child) { 
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: border;
+        }
+        #title {
+            font-size: 65px;
+        }
+        #subtitle {
+            font-size: 16px;
+        }
+        #subsubtitle {
+            height: 20px;
+            font-size: 12px;
+            background: lightgray;
+            line-height: 20px;
+        }
+        .container {
+            display: flex;
+        }
+        .left_bar {
+            flex-grow: 1;
+        }
+        .left_bar>div {
+            display: block;
+            height: 30px;
+            font-size: 14px;
+            padding: 0 0 0 5px;
+            line-height: 30px;
+            font-weight: bolder;
+        }
+        #artist {
+            background: rgb(204, 34, 34);
+            font-size: 18px;
+            color: white;
+            font-weight: lighter;
+        }
+        .center {
+            background: lightcyan;
+            flex-grow: 2;
+        }
+        .right_bar {
+            background: lightgreen;
+            flex-grow: 1;
+        }
+        .bottom_bar {
+            position: fixed;
+            left:0; bottom:0;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="top">
+            <div id="title">Musee dOrsay</div>
+            <div id="subtitle">Musee dOrsay Musee dOrsay Musee dOrsay Musee dOrsay Musee dOrsay</div>
+        </div>
+        <div id="subsubtitle">RoyalAcademy of Arts, THE REAL VANGOGH THE ARTIST AND HIS LEFTERS</div>
+        <div class="middle">
+            <div class="left">
+                <div id="artist">ARTIST</div>
+                <div><ins>작가의 작품</ins></div>
+                <div><ins>작가의 시대</ins></div>
+                <div><ins>작가의 일생</ins></div>
+            </div>
+            <div class="center">가운데</div>
+            <div class="right">오</div>
+        </div>
+        <div class="bottom">바텀</div>
+    </div> -->
+
+
+    <div id="box">
+        <div class="top_bar">
+            <div id="title">Musee dOrsay</div>
+            <div id="subtitle">Musee dOrsay Musee dOrsay Musee dOrsay Musee dOrsay Musee dOrsay</div>
+            <div id="subsubtitle">RoyalAcademy of Arts, THE REAL VANGOGH THE ARTIST AND HIS LEFTERS</div>
+        </div>
+        <div class="container">
+            <div class="left_bar">
+                <div id="artist">ARTIST</div>
+                <div><ins>작가의 작품</ins></div>
+                <div><ins>작가의 시대</ins></div>
+                <div><ins>작가의 일생</ins></div>
+            </div>
+            <div class="content">
+                <div id="artist">ARTIST</div>
+                <div><ins>작가의 작품</ins></div>
+                <div><ins>작가의 시대</ins></div>
+                <div><ins>작가의 일생</ins></div>
+            </div>
+            <div class="right_bar">
+                <div id="artist">ARTIST</div>
+                <div><ins>작가의 작품</ins></div>
+                <div><ins>작가의 시대</ins></div>
+                <div><ins>작가의 일생</ins></div>
+            </div>
+        </div>
+        <div class="bottom_bar">바닥글</div>
+    </div>
+
+
+</body>
+</html>

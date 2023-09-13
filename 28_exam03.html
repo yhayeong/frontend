@@ -92,6 +92,23 @@
         /* 고정크기인 1st자식요소를 제외한 나머지 요소끼리 2:1 즉 3분의2, 3분의1 비율로 아이템을 배분 */
         
 
+        div.container4 {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black; 
+            padding: 10px;
+        }
+        .item4 {
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0; */
+            /* 한줄로 축약 */
+            flex: 1 1 30%;
+            border: 1px solid black; 
+            margin: 2px;
+        }
+
+
         /* <정리>
         [1]
         justify-content -> 자식요소의 수평정렬 값 선택
@@ -129,20 +146,16 @@
 
     <br><hr><br>
     <div class="container4">
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
-        <div class="item4">ITEM</div>
+        <div class="item4">ITEM1</div>
+        <div class="item4">ITEM2</div>
+        <div class="item4">ITEM3</div>
+        <div class="item4">ITEM4</div>
+        <div class="item4">ITEM5</div>
+        <div class="item4">ITEM6</div>
+        <div class="item4">ITEM7</div>
+        <div class="item4">ITEM8</div>
+        <div class="item4">ITEM9</div>
+        <div class="item4">ITEM10</div>
     </div>
 
 
