@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재작성</title>
+    <style>
+        .top_bar {
+            text-align: center;
+
+            /* ??? */
+            white-space: nowrap;
+            orverflow: hidden;
+        }
+        .topSec1 {
+            background: rgb(255, 187, 0);
+            color: white;
+        }
+        #main_title {
+            font-size: 120px;
+            font-weight: border;
+        } 
+        #sub_title {
+            font-size: 40px;
+        }
+        .topSec2 {
+            background: lightgray;
+            padding: 8px;
+            font-size: 20px;
+        }
+        
+        .container {
+            display: flex;
+        }
+
+        .aside {
+            flex-grow: 2;
+        }
+        .contents {
+            flex-grow: 1;
+            background: rgb(235, 235, 235)
+        }
+
+        .bottom_bar {
+            background: rgb(55, 55, 131);
+            font-size: 25px;
+            color: white;
+        }
+        .bottom_bar:not(first-child) {
+            font-size: 20px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 탑 바 -->
+    <div class="top_bar">
+        <div class="topSec1">
+            <div id="main_title">Musee d'Orsay</div>
+            <div id="sub_title">Musee d'Orsay Musee d'orsay Musee d'orsay Musee d'orsay Musee d'orsay</div>
+        </div>
+        <div class="topSec2">
+            Royal Academy of Arts. THE REAL VANGOGH THE ARTIST AND HIS LETTERS
+        </div>
+    </div>    
+
+    <!-- 컨테이너 : 어사이드 왼 / 컨텐츠 / 어사이드 오 -->
+    <div class="container">
+        <div class="aside left_bar">
+            <ul>
+                <li>작가의 작품</li>
+                <li>작가의 시대</li>
+                <li>작가의 일생</li>
+            </ul>
+        </div>
+        <div class="contents">
+            <div class="card">
+                <div class="card_title">피리부는 소년</div>
+                <div class="artist">에두아르 마네</div>
+                <div class="detail">1866 캔버스에 유채, 161*97cm, 파리 오르세 Edouard MANET, Le Fifire, H.T, 161*97cm</div>
+            </div>
+            <div class="card">
+                <div class="card_title">피리부는 소년</div>
+                <div class="artist">에두아르 마네</div>
+                <div class="detail">1866 캔버스에 유채, 161*97cm, 파리 오르세 Edouard MANET, Le Fifire, H.T, 161*97cm</div>
+            </div>
+            <div class="card">
+                <div class="card_title">피리부는 소년</div>
+                <div class="artist">에두아르 마네</div>
+                <div class="detail">1866 캔버스에 유채, 161*97cm, 파리 오르세 Edouard MANET, Le Fifire, H.T, 161*97cm</div>
+            </div>
+            <div class="card">
+                <div class="card_title">피리부는 소년</div>
+                <div class="artist">에두아르 마네</div>
+                <div class="detail">1866 캔버스에 유채, 161*97cm, 파리 오르세 Edouard MANET, Le Fifire, H.T, 161*97cm</div>
+            </div>
+            <div class="card">
+                <div class="card_title">피리부는 소년</div>
+                <div class="artist">에두아르 마네</div>
+                <div class="detail">1866 캔버스에 유채, 161*97cm, 파리 오르세 Edouard MANET, Le Fifire, H.T, 161*97cm</div>
+            </div>
+            <div class="card">
+                <div class="card_title">피리부는 소년</div>
+                <div class="artist">에두아르 마네</div>
+                <div class="detail">1866 캔버스에 유채, 161*97cm, 파리 오르세 Edouard MANET, Le Fifire, H.T, 161*97cm</div>
+            </div>
+        </div>
+        <div class="aside right_bar">
+            <div>
+                <div>전세계인들에게</div>
+                <div>제일 사랑받는</div>
+                <div>서양미술사의 시대</div>
+            </div>
+
+            <p>
+                <b>Workshop Go</b><br>
+                Life drowing workshop
+            </p>
+            <p>
+                <b>Summer exhibition Go</b><br>
+                A-level Summer Exibition Online 2010
+            </p>
+            <p>
+                <b>RA collection</b><br>
+                RA collections
+            </p>
+        </div>
+    </div>
+
+    <!-- 바텀 바 -->
+    <div class="bottom_bar">
+        <span>&copy; 2012 Les Amis du Musee d'Orsay. All rights reserved.</span>
+        <span><ins>amis@amis-musee-orsay.org</ins></span>
+        <span>Legal status</span>
+    </div>
+</body>
+</html>
