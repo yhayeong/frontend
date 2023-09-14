@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 백틱
+        
+        let name = '홍길동';
+        let age = 30;
+
+        let info = `이름 ${name}, 나이:${age}`; //이름 홍길동, 나이:30 (자바의 String.format과 유사)
+        document.write(info);
+
+        
+        // 2. 객체
+
+        let per = {};  //빈 객체
+        // alert(typeof per); //object
+        per = {name: 'hong', age:30, addr:'seoul'}; //겍체에 데이터를 키:벨류 형식으로 넣는다
+        
+
+        // 배열은 객체의 한 종류이다
+        let pers = [];
+        // alert(typeof pers); //object
+
+        let arr = [10,20,30,40,50];
+        let sum = 0;
+        for (let i=0; i<arr.length; i++) {
+            sum += arr[i];
+        }
+        // alert(sum); //150
+
+
+        // 객체배열
+        pers = [{name:'hong', age:30, addr:'seoul'},
+                {name:'kong', age:20, addr:'incheon'},
+                {name:'song', age:40, addr:'busan'}];
+        let str = '<table border=1><tr><th>이름</th><th>나이</th><th>주소</th>';
+        for(i=0; i<pers.length; i++) {
+            str += `<tr><td>${pers[i].name}</td><td>${pers[i].age}</td><td>${pers[i].addr}</td></tr>`;
+            // 데이터를 테이블태그로 감싸기 위해 문자열은 백틱 사용해야함
+        }
+        str += '</table>';
+        document.write(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

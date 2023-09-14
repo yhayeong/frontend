@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 변수의 타입을 확인
+        // let x = 10;
+        // let x; 
+        // let x = 'hong';
+        // let x = true;
+        let x = new Date();
+        // alert(typeof x); //undifined, number, string, boolean, object
+
+
+        // 2. 함수에 리턴타입을 적지 않고 매개변수의 타입도 적지 않는다
+        function sum(x,y) {
+            return x+y;
+        }
+        let f = sum; //함수를 변수에 담을 수 있다
+
+        alert(typeof sum); //function
+        alert(typeof f); //function
+
+
+        // 3. 널도 object타입이다
+        let nl = null;
+        alert(typeof nl); //object
+
+
+        /* 정리
+        [1] 연산자로서의 typeof
+        typeof undefined;   //undefined
+        typeof 0;           //number
+        typeof 10n;         //bigint (큰 정수)
+        typeof true;        //boolean
+        typeof Math;        //object
+        typeof Date;        //object
+        typeof null;        //object
+        typeof alert;       //function
+        typeof 'banana';    //string
+
+        [2] 함수로서의 typeof()
+        typeof('string');
+        
+
+        [3] 변수,함수 명명 규칙:
+        a~z or A~Z or 0~9 or $ or _의 조합
+
+        cf. 
+        파일명에 공백 넣지 말기
+        이미지파일 같은 리소스 파일의 이름으로 대문자 넣지 말기
+        클래스를 제외한 리소스 일반파일들은 다 소문자 권고 (자바베이스라면)
+        하이픈도 지양
+        */
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth()+1; //달: 0(1월),...
+        var day = date.getDate();
+        var weekday = date.getDay(); //요일:일(0),월(1)..,토(6)
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+
+        // document.write('date: ' + date);
+        document.write(year+'년 '+month+'월 '+day+'일 '+weekday+'요일');
+        if(hours<12) {
+            document.writeln('오전입니다.');
+        } else {
+            document.writeln('오후입니다.');
+        }
+        document.write(hours+'시 '+minutes+'분 '+seconds+'초');
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
