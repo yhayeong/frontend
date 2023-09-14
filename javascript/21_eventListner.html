@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트리스너</title>
+    <script>
+        function handle1() {
+            alert('감사합니다.');
+        }
+        function handle2() {
+            alert('다시 한번 감사합니다.');
+        }
+        window.onload = function() {
+            elem.onclick = () => alert("안녕하세요?");
+            elem.addEventListener('click', handle1);
+            elem.addEventListener('click', handle2);
+            // addEventListener가 onclick보다 고전적인 방식이며, 추가적으로 함수를 여러개 등록할 수 있다는 장점이 있다.
+
+            elem.addEventListener('click', ()=>alert('잘가세요'));
+            // 미리 정의한 함수의 이름 대신 화살표함수를 두번째 인자로 넣어줌
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="elem" value="클릭해주세요">
+</body>
+</html>

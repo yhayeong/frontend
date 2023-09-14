@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_submit 이벤트</title>
+    <script>
+        window.onload = function() {
+            form.onsubmit = function(e) {
+                // alert("form submit");
+
+                // 타당성 체크 후 통과하지 못하는 경우는 제출하지 않게 걸러줄때 이렇게 사용할수있다.(기본이벤트(submit타입인 인풋태그 클릭시 폼이 제출되는) 제거)
+                let id = document.getElementById("id");
+                if(id.value.trim().length<4) {
+                    alert('아이디는 4자리 이상이어야합니다.')
+                    // return false;
+                    e.preventDefault(); // return false;와의 차이는 함수를 끝내지는 않고 밑으로 이어감
+                }
+                let pw = document.getElementById("pw");
+                if(pw.value.trim().length<4) {
+                    alert('비밀번호는 4자리 이상이어야합니다.')
+                    return false; // 리액트에서는 return false;는 안먹고 e.preventDefault();해야함
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="test.html" id="form">
+        <input type="text" name="id" id="id" placeholder="아이디를 입력하세요"><br>
+        <input type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요"><br>
+        <input type="checkbox" name="hobby" value="book">독서
+        <input type="checkbox" name="hobby" value="movie">영화감상
+        <input type="checkbox" name="hobby" value="music">음악감상<br>
+        <input type="radio" name="gender" value="male" checked>남
+        <input type="radio" name="gender" value="female">여<br>
+        <input type="submit">
+    </form>
+</body>
+</html>

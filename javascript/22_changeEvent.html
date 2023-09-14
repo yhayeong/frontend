@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체인지 이벤트</title>
+    <script>
+        window.onload = function() {
+            // 1.
+            select.onchange = (e) => {
+                fruit.textContent = e.target.value;
+            }
+
+            // 2.
+            // 2-1. 입력한 뒤 포커스가 밖으로 나가면 콘솔에 출력하게함
+            // input.onchange = (e) => {
+            //     console.log(e.target.value);
+            // }
+
+            // 2-2. 입력하는 동안 변화되는 값을 모두 콘솔에 출력하게함
+            input.oninput = (e) => {
+                console.log(e.target.value);
+            }
+
+            // 3.
+            let radios = document.querySelectorAll('input[type="radio"]');
+            for (let radio of radios) {
+                radio.onchange = (e) => {
+                    alert(e.target.value);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 1.  -->
+    <select name="" id="select">
+        <option value="apple">사과</option>
+        <option value="banana">바나나</option>
+        <option value="orange">오렌지</option>
+    </select>
+    <div id="fruit"></div>
+    <hr>
+    
+    <!-- 2.  -->
+    <input type="text" id="input">
+    <hr>
+
+    <!-- 3. -->
+    <input type="radio" name="gender" value="male" checked>남
+    <input type="radio" name="gender" value="female">여
+
+</body>
+</html>
