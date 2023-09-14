@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            // 1. 동적으로 이미지태그에 src 삽입하기
+            let image = document.getElementById('image');
+            image.src = 'flower1.jpg';
+            image.width = 300;
+
+            // 2. 속성 추가하고 추출하기
+            let div = document.getElementById('div');
+            div.setAttribute('data', 'I am a data');
+            console.log(div.getAttribute('data')); //I am a data 출력됨
+
+            console.log(div.getAttribute('data-name')); //hong 출력됨
+        }
+    </script>
+
+</head>
+<body>
+    <img src="" alt="" id="image">
+
+    <div id="div" data-name="hong"></div>
+</body>
+</html>

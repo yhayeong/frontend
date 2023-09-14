@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+            window.onload = function () {
+            // let inputs = document.getElementsByTagName('input'); // 1-1.
+            let inputs = document.getElementsByName('age'); // 3-2.
+            let divs = document.getElementsByTagName('div'); // 2-2.
+
+            for (let input of inputs) {
+                console.log(input.value + ":" + input.checked); //1-2.
+
+                if(input.checked) {
+                    divs[0].innerHTML = input.value; // 2-2.
+                }
+            }
+            /* 1-2. 반복문 출력 결과
+            young:true
+            mature:false
+            senior:false
+            */ 
+           // 1.2. getElementsByTagName는 리턴타입이 배열인 복수선택자임을 주의한다. 
+
+
+            // 3-3.
+            let genders = document.getElementsByName('gender');
+            for (let gender of genders) {
+                console.log('체크된 성별: ' +gender.value);
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>나이:</td>
+            <td>
+                <label for="">
+                    <input type="radio" name="age" value="young" checked>18세 미만
+                </label>
+                <label for="">
+                    <input type="radio" name="age" value="mature">18세 이상, 60세 미만
+                </label>
+                <label for="">
+                    <input type="radio" name="age" value="senior">60세 이상
+                </label>
+            </td>
+        </tr>
+
+        <!-- 3-1. 행 추가 -->
+        <tr>
+            <td>성별:</td>
+            <td>
+                <label for="">
+                    <input type="radio" name="gender" value="man" checked>남자
+                </label>
+                <label for="">
+                    <input type="radio" name="age" value="woman">여자
+                </label>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 체크된 벨류를 넣을 div -->
+    <div></div>
+    <!-- innerHTML로 담은 value가 브라우저에서 보인다 -->
+</body>
+</html>

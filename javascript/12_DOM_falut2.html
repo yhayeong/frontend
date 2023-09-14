@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 이렇게 하면 맨 아래에 스크립트를 넣지 않더라도 js에 의한 html조작이 적용 된다
+
+        // 자동호출함수 (==이벤트==이벤트함수) 를 '정의'(호출x)해두는 방식
+        // 호출시점 : dom이 모두 생성된 후
+        
+        // 처음 로드되자마자 실행되어야하는 js코드는 이렇게 window.onlad로 감싸는 것이 권장된다.
+
+
+        window.onload = function() {
+            document.querySelector('h2').style.color='red';
+
+            // document.querySelector('h1').style.backgroundColor='yellow'; // 첫번째 h1만 선택됨
+            var h1s = document.querySelectorAll('h1');
+            for(var h1 of h1s) {
+                h1.style.backgroundColor='yellow'; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello Javascript</h1>
+    <h1>Hello Javascript</h1>
+    <h2>Hello JQuery</h2>
+</body>
+</html>

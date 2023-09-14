@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- script가 여기 있으면 uncatched에러 나면서 js를 통한 태그 조작이 적용 안됨 (아직 h1,h2 생성 전이기 때문) -->
+</head>
+<body>
+    <h1>Hello Javascript</h1>
+    <h2>Hello JQuery</h2>
+
+    <script>
+        document.querySelector('h1').style.backgroundColor='red';
+        document.querySelector('h2').style.color='red';
+    </script>
+</body>
+</html>

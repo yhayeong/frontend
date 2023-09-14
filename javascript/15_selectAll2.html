@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        window.onload = function() {
+            let elements = document.querySelectorAll('ul>li:first-child');
+            for (let e of elements) {
+                alert(e.innerHTML); // 홍길동 -> 김길동 순으로 얼럿창이 두번 뜬다
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>홍길동</li>
+        <li>1-2</li>
+    </ul>
+    <ul>
+        <li>김길동</li>
+        <li>2-2</li>
+    </ul>
+</body>
+</html>

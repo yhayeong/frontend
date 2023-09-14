@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 이벤트</title>
+    <script>
+        
+        // 1-2. 방법1
+        function buttonClick() {
+            alert("click1");
+        }
+        
+        window.onload = function () {
+            // 2-2. 방법2
+            let btn2 = document.getElementById('button2');
+            btn2.onclick = function() {
+                alert("click2");
+            }
+
+            // 3-2. 방법3
+            // document.getElementById("button3").onclick = function() {
+            button3.onclick = function() {
+                this.textContent = this.textContent+'*';
+                // 클릭할때마다 button3의 텍스트컨텐트에 *이 추가됨
+            }
+
+            // 특정 아이디는 getElementById가 아니라 아이디.onclick으로 사용 가능 (js버전업하면서 가능해짐)
+        }
+
+    </script>
+</head>
+<body>
+    <!-- 1-1. -->
+    <button onclick="buttonClick()">버튼1</button>
+    
+    <!-- 2-1. -->
+    <button id="button2">버튼2</button>
+    
+    <!-- 3-1. -->
+    <button id="button3">버튼3</button>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 문자형으로 형변환하기
+        let n = 10;
+        let sn = String(n);
+        console.log(typeof sn); //string
+
+        let b = true;
+        let sb = String(b);
+        console.log(sb);        //true
+        console.log(typeof sb); //string
+
+
+        // 2. 숫자로 형변환하기
+        // 2-1. 문자 -> 숫자
+        let ns = "123";
+        let nn = Number(ns);
+        console.log(nn);        //123
+        console.log(typeof nn); //number
+
+        ns = '123z';
+        nn = Number(ns);        // 숫자로만 구성되지않은 문자를 숫자로 형변환하게되면
+        console.log(nn);        //NaN(Not a Number)으로 출력됨
+
+        // 2-2. 불린 -> 숫자
+        let bn = Number(b);    
+        console.log(bn);         // 1 (true를 숫자로 형변환시 1이 나온다)
+        console.log(typeof bn);  //number
+
+        b = false;
+        bn = Number(b);
+        console.log(bn);         // 0 (false를 숫자로 형변환시 0이 나온다)
+
+
+        // 3. 불린으로 형변환
+        // 3-1. 숫자 -> 불린
+        let nb = Boolean(1);     // 0이 아닌 모든 숫자는 true로 변환된다
+        console.log(nb);         // true
+        console.log(typeof nb);  // boolean
+
+        nb = Boolean(0);         // 0은  false로 변환된다
+        console.log(nb);         // false
+
+        // 3-2. 문자 -> 불린
+        let ssb =  Boolean('hong');
+        console.log(ssb);        // true
+        console.log(typeof ssb); // boolean
+
+        ssb =  Boolean('0');
+        console.log(ssb);        // true
+
+        ssb =  Boolean('');     
+        console.log(ssb);        // false (빈 문자열만 false로 변환된다)
+
+        ssb =  Boolean(' ');
+        console.log(ssb);        // true
+
+        // 3-3. 객체와 배열 -> 불린
+        let obj = { A: 'aaa' };
+        console.log(Boolean(obj));  // true
+        
+        obj = {}
+        console.log(Boolean(obj));  // true (빈 객체와 빈 배열도 true임에 주의)
+        
+        let arr = [];
+        console.log(Boolean(arr));  
+
+        // 3-4. 기타
+        /* 형변환시 false로 변환되는 데이터:
+            0, null, '', undefined, Nan
+            (주의 - '0', ' '는 true로 변환됨) */
+
+        // null -> 불리언은 false로 형변환됨
+        console.log(Boolean(null)); //false
+
+        // undefined -> 불리언은 false로 형변환됨
+        let v;
+        console.log(Boolean(v)); //false (v에는 undefined가 들어있다)
+        
+        // NaN -> 불리언은 false로 형변환됨
+        console.log(Boolean(v)); //false
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
