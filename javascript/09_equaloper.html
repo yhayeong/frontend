@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 1. == 
+
+        let n = 10; 
+        let s = '10';
+
+        if(n==s) {
+            console.log('같다'); // 출력됨
+        } else {
+            console.log('다르다');
+        }
+        // 임시적 형변환에 의해 데이터가 같은지를 비교한다
+        // (타입이 달라도 자동 형변환하여 비교하는 느슨한 비교)
+
+
+
+
+        // 2. ===
+
+        if(n===s) {
+            console.log('같다'); 
+        } else {
+            console.log('다르다'); // 출력됨
+        }
+        // 데이터와 타입까지 같은지를 비교한다
+
+
+
+        // 3. 주의
+
+        let b = true;
+        let bs = 'true';
+        if(b==bs) {
+            console.log('같다');
+        } else {
+            console.log('다르다'); // 출력됨
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

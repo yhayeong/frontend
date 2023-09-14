@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //1-1. 이름이 있는 함수 정의와 호출
+        function add(x,y) {
+            return x+y;
+        }
+        var result = add(10,20);
+        // alert(result);
+
+
+        //1-2. 함수 자체를 변수에 넣어서 변수를 함수처럼 사용할 수 있다
+        var sum = add;
+        sum(100,200);
+
+
+        //2. 익명 함수 정의, 익명 함수를 변수에 할당
+        var minus = function(x,y) {
+            return x-y;
+        }
+        // alert(minus(100,50));
+
+        //*** 함수를 변수에 담으면 매개변수로 넘길 수 있다
+        
+
+        //3. 화살표 함수 ***
+        var multi1 = (x,y) => x*y;
+                  //매개변수  //본체
+        
+        var multi2 = (x,y) => { return x*y };
+
+
+        //아래 함수를 화살표함수로 만든것
+        var multi = function(x,y) {
+            return x*y;
+        }
+        // alert(multi1(10,20));
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

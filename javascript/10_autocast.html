@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        // 1. 자동형변환이 되는 경우
+
+        console.log('6'/3); // 2
+        console.log('6'/'3'); // 2
+        console.log('A'/'3'); // NaN
+        // console.log(A/'3'); //에러
+        
+        console.log('6'+3); // 63 (문자열의 더하기연산 수행)
+        console.log('6'+'3'); // 63
+
+        
+        // 2. 자동형변환이 불가능하여 수동형변환해줘야하는 경우
+        
+        let b = true;
+        let bs = 'true';
+
+        let bsb = Boolean(bs);
+        if(b==bsb) {
+            console.log('bsb==b'); // 출력됨
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

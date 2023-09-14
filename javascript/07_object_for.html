@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 키를 통해 벨류를 갖다쓰기
+        var product = {
+            name: '건조망고',
+            type: '당절임',
+            ingredient: '망고,설탕,메타중아환산나트륨,치자황생소',
+            origin: '필리핀',
+            '제품명': '한글제품명01',
+        };
+        var n1 = product.name;
+        var n2 = product['name'];
+        console.log(n1);
+        console.log(n2);
+        console.log(product['제품명']);
+
+        // 1-2. 객체 안의 속성을 추출하기 위한 for-in문
+        for (var key in product) {
+            console.log(key+':'+product[key]); 
+            // console.log(key+':'+product.key); // 불가
+        }
+
+        // 2. 객체에 쓰는 for-in문을 배열에도 쓸수있다
+        var arr = [10,20,30,40,50];
+        for (var idx in arr) {
+            console.log('idx= ' + idx);
+            console.log('arr['+idx+']= ' + arr[idx]);
+        }
+
+        // 3. for-of문은 자바의 향상 for문과 유사하다
+        for (var element of arr) {
+            console.log(element);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
