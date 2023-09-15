@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function() {
+
+            // 1. keyup : 키보드에서 뗐을때
+
+            // 첫번째 input태그에 6개의 문자가 입력되자마자 두번째 input태그로 포커스가 이동하게하기
+            // $('#jumin1').keydown(function() {
+            $('#jumin1').keyup(function() {
+                if($(this).val().length>=6) {
+                    $('#jumin2').focus();
+                }
+            });
+
+            // 마찬가지로 두번째 input태그에서 백스페이스를 누르거나 첫번째 input태그에 입력값이 없을때 첫번째 input태그로 이동하게하기
+            $('#jumin2').keyup(function(e) {
+                if(e.keyCode==8 && $(this).val().length==0) {
+                    $('#jumin1').focus();
+                }
+            });
+
+            // 2. keydown : 키보드를 누를 때]
+
+            // 숫자와 백스페이스만 입력되게하기 (원하는 값만 들어가게하기)
+            $('.jumin').keydown(function(e) {
+                // console.log(e.keyCode); // keyCode 48 ~ 57: 0 ~ 9임을 확인
+
+                if(!((e.keyCode>=48 && e.keyCode<=57) ||e.keyCode==8)) {
+                    return false;
+                }
+            });
+
+            // 한글과 백스페이스만 입력되게하기
+            $('#name').keydown(function(e) {
+                // if(!($(this).val().replace(/[가-힣]/g, '').length==0 ||e.keyCode==8)) {
+                if(!(e.keyCode==229 ||e.keyCode==8)) {
+                    return false;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    주민등록번호<br>
+    <input type="text" maxlength="6" id="jumin1" class="jumin">
+    <span>-</span>
+    <input type="text" maxlength="7" id="jumin2" class="jumin">
+    <hr>
+    한글이름<br>
+    <input type="text" name="" id="kor_name">
+</body>
+</html>

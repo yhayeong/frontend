@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본기능(ex.form태그의 submit또는 a태그의 href)을 막는 preventDefault</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function() {
+            $('a').click(function(e) {
+                e.preventDefault();
+                // return false;
+                alert('클릭됨');
+            });
+            // e.preventDefault(); => alert은 작동하지만 기본기능인 a태그의 href는 막힌다.
+            // return false; => 함수를 종료하므로 alert 작동되지 않음
+
+            $('form').submit(function(e) {
+                e.preventDefault();
+                // form태그의 기본 기능인 제출을 막는다
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="http://kosta.com">코스타</a>
+
+    <form action="http://kosta.com">
+        <input type="submit" name="" id="">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        // form 제출시 타당성 검사하기
+        $(function() {
+            $('form').submit(function() {
+                let userInput = $('input').val();
+
+                // 정상일때
+                if(userInput.replace(/[가-힣]/g, '').length==0) {
+                // if(userInput.replace(/[0-9]/g, '').length==0) {
+                // if(userInput.replace(/[a-z|A-Z]/g, '').length==0) {
+                // if(userInput.replace(/[a-z|A-Z|0-9]/g, '').length==0) {
+                // if(userInput.replace(/[0-9|,]/g, '').length==0) {
+                    alert('과정을 진행합니다.');
+
+                // 비정상일때
+                } else {
+                    alert('한글 이름을 입력하세요!!!');
+                    event.preventDefault();
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <form action="/login">
+        <lable for="">이름</lable>
+        <input type="text" name="" id="">
+        <input type="submit">
+    </form>
+</body>
+</html>
