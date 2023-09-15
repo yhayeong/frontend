@@ -7,10 +7,29 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
         $(function() {
-            $('h1').click(function() {
+            // 1-(1).
+            // $('h1').click(function() {
+            //     alert('클릭됨');
+            // });
+            // 1-(2).
+            $('h1').on('click', function() {
                 alert('클릭됨');
+            })
+
+            // 2.
+            $('h1').hover(function() {
+                $(this).css({
+                    background: 'red',
+                    color:'white'
+                })
+            }, function() {
+                $(this).css({
+                    background:'',
+                    color:''
+                })
             });
         });
+
 
         /* 순수JS
         window.onload = function() {
@@ -23,6 +42,7 @@
     </script>
 </head>
 <body>
+    <h1>Click</h1>
     <h1>Click</h1>
 </body>
 </html>
