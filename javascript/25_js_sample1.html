@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>샘플1</title>
+    <style>
+        li { cursor: pointer; }
+        .selected {
+            background: cyan;
+        }
+    </style>
+
+    <!-- 선택(옵셔널)하는 기능이 없는 li태그에 하나를 선택할때 나머지가 선택해제되게끔 만들기 
+        처음에는 없는 속성이 누를때 동적으로 들어가게 하는 것 =>> JS가 조작 
+        
+        속성은 동적으로 넣는것이 setAttribute였는데
+        클래스는 그것으로 하면 덮어쓰기때문에
+        기존 클래스를 유지하면서 추가적으로 조작하기 위해서는 아래와 같이 해야한다
+    -->
+    <script>
+        function toggleSelect(li) {
+            li.classList.toggle('selected'); //class리스트 중 selected라는 클래스만 토글(==있으면 빼고 없으면 넣기)
+        }
+        function singleSelect(li) {
+            let selected = ul.querySelectorAll('.selected');
+            for(var elem of selected) {
+                elem.classList.remove('selected');
+            }
+            li.classList.add('selected');
+        }
+
+        window.onload = function () { 
+            ul.onclick = function(e) {
+                if(e.target.tagName != 'LI') return;
+                //ul 아래의 li가 눌린것이 아니면 함수종료한다
+
+                // 컨트롤이랑 같이 클릭되면 토글하게함
+                if(e.ctrlKey) {
+                    toggleSelect(e.target); //e.target:눌려진 애(li) 자체를 의미
+                } else {
+                    singleSelect(e.target);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    선택하고자하는 요소를 클릭하세요<br>
+    <ul id="ul">
+        <li class="selected">React</li>
+        <li>Angular</li>
+        <li>Vue</li>
+        <li>Servlet</li>
+        <li>Blazor</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+    <style>
+        #div {
+            width: 100px; height: 100px;
+            background: honeydew;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            // 좌클릭시 콘솔에 0이 찍힘 (좌클릭시 event의 button 속성은 0이 됨)
+            btn.onclick = function(event) { 
+                console.log(event.button);
+            }
+            // 우클릭시 콘솔에 2가 찍힘
+            btn.oncontextmenu = function(event) {
+                console.log(event.button);
+            }
+            
+            // 마우스 클릭했을때(다운) 뗐을때(업)
+            btn.onmousedown = function(event) {
+                console.log("마우스 다운");
+            }
+            btn.onmouseup = function(event) {
+                console.log("마우스 업");
+            }
+
+            div.onclick = function(event) {
+                if(event.altKey) {
+                    console.log("Enter와 Alt가 눌러짐");
+                } else if(event.shiftKey) {
+                    console.log("Enter와 Shift가 눌러짐");
+                } else if(event.ctrlKey) {
+                    console.log("Enter와 Ctrl가 눌러짐");
+                }
+            }
+
+            div.ondblclick = function(event) {
+                console.log("더블클릭됨");
+                // 더블클릭시 작동할 기능을 이 자리에 작성하면 된다
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">Click</button>
+    <div id="div">Div</div>
+</body>
+</html>
