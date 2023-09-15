@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        var frames = ['pic_0.png', 'pic_1.png', 'pic_2.png', 'pic_3.png', 'pic_4.png', 'pic_5.png', 'pic_6.png'
+        , 'pic_7.png', 'pic_8.png', 'pic_9.png', 'pic_10.png', 'pic_11.png', 'pic_12.png', 'pic_13.png', 'pic_14.png']
+        $(function() {
+            var count = 0;
+            setInterval(function() {
+                $('#image').attr('src', frames[count%frames.length]);
+                count++;
+            }, 50);
+        });
+    </script>
+</head>
+<body>
+    <img src="" alt="" id="image">
+</body>
+</html>
