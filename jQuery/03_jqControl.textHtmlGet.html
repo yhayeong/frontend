@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        // h1에 있는 텍스트를 읽어서 새로만든 p태그 안에 append하기 
+        // (1)text로 (2)html로 했을때의 차이
+        $(function() {
+            var text = $('div').text(); // 선택자가 두개에 적용될때 둘다 읽음 
+            var html = $('div').html(); // 같은 경우에 하나만 읽음
+
+            console.log(text);
+            console.log(html);
+
+            $('body').append(`<p>text: ${text}</p>`);
+            $('body').append(`<p>html: ${html}</p>`); 
+        });
+    </script>
+</head>
+<body>
+    <div><h1>Header - 0</h1></div>
+    <div><h1>Header - 1</h1></div>
+    <hr>
+    
+</body>
+</html>

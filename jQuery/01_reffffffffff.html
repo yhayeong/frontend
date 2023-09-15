@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        // $(document).ready(function() { // window.onload = function() {}
+
+        // })
+
+        // 위와 동일
+        $(function() {
+            $('h1').css('color', 'red');
+            $('h1').css('background', 'black');
+
+            // attr() (attribute)
+            // attr: 특정 태그의 속성을 읽어옴 or 특정 태그에 속성을 지정
+            // 만약 attr의 파리미터가 한 개일 경우, 특정 태그 속성의 특정 값을 읽어옴
+            // 만약 attr의 파리미터가 두 개일 경우, 값을 넣어주는 것
+            // alert('script'.attr('src'));
+
+            // v
+            $('p').attr('id', 'test');
+            // $('img').attr('src', 'flower1.jpg');
+            // $('img').attr('alt', '꽃');
+            // $('img').attr('width', '200px');
+
+            // img 태그의 속성을 순서대로 지정
+            // (인덱스가 존재하므로, 특정 인덱스의 값을 function을 통해 다르게 지정 가능)
+            // index는 0부터 시작
+            $('img').attr({
+                src: function(index) {
+                    return 'flower' + (index + 1) + '.jpg'
+                },
+                alt:'꽃',
+                width: function(index) {
+                    return (index + 1) * 100;
+                }
+            })
+        })
+
+        // 위의 jquery문을 JS로 구현
+        // window.onload = function(e) {
+        //     // 태그명은 무조건 한번에 속성 지정 불가
+        //     // 무조건 반복문을 통해 모두 지정해주어야 함
+        //     var hs = document.querySelector('h1');
+        //     for(var h of hs) {
+        //         h.style.color = 'red';
+        //         h.style.background = 'black';
+        //     }
+        // }
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <p></p>
+    <img src="" alt=""><br>
+    <img src="" alt=""><br>
+    <img src="" alt="">
+</body>
+</html>

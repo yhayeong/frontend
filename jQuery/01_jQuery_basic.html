@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        /* window.onload = function() {} 과 같다
+        $(document).ready(function() {
+        });
+
+        // 위와 같은데 축약
+        $(function() {
+        });
+        */
+        
+
+        $(function() {
+            // 1-1.
+            $('h1').css('color', 'red');
+            $('h1').css('background', 'black');
+
+            // 2. attr(인자하나), attr(인자1,인자2)
+            // 2-1. 태그의 속성을 가져오기
+            // alert($('script').attr('src'));
+
+            // 2-2. 태그에 속성을 동적으로 삽입하기
+            // $('p').attr('id', 'test');
+            // $('img').attr('src', 'flower1.jpg');
+            // $('img').attr('alt', '꽃사진');
+            // $('img').attr('width', '200px');
+            $('img').attr({
+                src:function(index) {
+                    return 'flower'+(index+1)+'.jpg'
+                },
+                
+                alt:'꽃사진',
+                width:function(index) {
+                    return (index+1)*100;
+                }
+            })
+        });
+        
+        // 1-2. 같은 코드를 순수JS로 작성한다면 이렇다
+        // window.onload = function() {
+        //     let h1s = document.querySelectorAll('h1');
+        //     // let h1s = document.getElementsByTagName('h1');
+        //     for (let h1 of h1s) {
+        //         h1.style.color = 'red';
+        //         h1.style.background = 'black';
+        //     }
+        // }
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+
+    <p></p>
+
+    <img src="" alt=""><br>    
+    <img src="" alt=""><br>    
+    <img src="" alt="">    
+    
+
+    <!-- cf. 제이쿼리 요약 
+        https://jejucodingcamp.notion.site/jQuery-fcbbf2a3d64345d995c2a375c1a3c5fe
+    -->
+
+</body>
+</html>
