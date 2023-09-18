@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+        .subject{
+            text-align: center;
+        }
+        .BtnWrap{
+            margin-top: 15px;
+            text-align: center;
+        }
+        table{
+            width: 450px;
+            margin: auto;
+        }
+        table th {
+            background-color: orange;
+            width: 180px;
+        }
+        input{
+            width: 97%;
+        }
+        textarea{
+            width: 98%;
+            height: 250px;
+        }
+    </style>
+    <title>MVP게시판</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="subject">게시판글상세</h2>
+        <form action="">
+            <table>
+                <tbody>
+                    <tr><th>글쓴이</th><td><input type="text" name="writer" id="writer"></td></tr>
+                    <tr><th>제목</th><td><input type="text" name="subject" id="subject"></td></tr>
+                    <tr><th>내용</th><td><textarea name="content" id="content" aria-valuetext=""></textarea></td></tr>
+                    <tr><th>이미지</th><td><img src=""></td></tr>
+                </tbody>
+            </table>
+            <div class="BtnWrap">
+                <button type="submit">수정</button>
+                <a href="boardlist.html">목록</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

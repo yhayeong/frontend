@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계좌개설</title>
+    <style>
+        .box {
+            display: flex;
+            flex-direction: column; /* 수직 정렬 */
+            align-items: center; /* 수평 정렬 */
+        }
+        fieldset {
+            width: 300px;
+            
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            /* border: 1px black solid; */
+            text-align: center;
+            font-weight: bold;
+        }
+        fieldset>:not(last-child) {
+            margin-bottom: 5px;
+        }
+        fieldset>:last-child {
+            text-align: center;
+            margin-top: 5px;
+        }
+        fieldset>:last-child>input {
+            display: inline-block;
+            width: 150px;
+            margin: 0 auto;
+            border: 3px solid black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>계좌개설</h3>
+        <fieldset>
+            <label for="accNo">계좌번호</label><input type="number"><br>
+            <label for="name">이름</label><input type="text"><br>
+            <label for="amount">입금액</label><input type="number"><br>
+            <label for="acctype">종류</label><input type="radio" name="acctype" checked>일반<input type="radio" name="acctype">특수<br>
+            <label for="grade">등급</label>
+            <select name="" id="">
+                <option value="vip">Vip</option>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+                <option value="normal">Normal</option>
+            </select><br>
+            <div>
+                <input type="submit" value="개설">
+            </div>
+        </fieldset>
+    </div>
+</body>
+</html>

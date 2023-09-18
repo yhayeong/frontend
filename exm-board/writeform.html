@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글작성폼</title>
+    <style>
+        form {
+            /* margin: 0 auto; */
+            
+            display: flex;
+            flex-direction: column; /* 수직 정렬 */
+            align-items: center; /* 수평 정렬 */
+        
+        }
+        .top {
+            text-align: center;
+        }
+        td:first-child {
+            background: orange;
+            width: 140px;
+        }
+        td:last-child {
+            background: skyblue;
+            width: 350px;
+        }  
+        #textarea {
+            background: white;
+            /* padding: 0 5px 5px 0; */
+        }
+        textarea {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+
+
+    </script>
+</head>
+<body>
+    <div class="top"><h2>게시판글등록</h2></div>
+    <form action="">
+        <table>
+            <tr>
+                <td>글쓴이</td>
+                <td><input type="text" id="writer"></td>
+            </tr>
+            <tr>
+                <td>제 목</td>
+                <td><input type="text" id="title"></td>
+            </tr>
+            <tr>
+                <td>내 용</td>
+                <td id="textarea"><textarea name="" id="" rows="20"></textarea></td>
+            </tr>
+            <tr>
+                <td>이미지 파일 첨부</td>
+                <td><input type="file"></td>
+            </tr>
+        </table>
+
+        <div class="foot">
+            <input type="submit" value="등록">
+            <input type="reset" value="다시쓰기">
+        </div>
+
+    </form>
+</body>
+</html>
