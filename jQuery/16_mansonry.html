@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masonry(벽돌쌓기) 레이아웃으로 갤러리 구현</title>
+    <style>
+        * { margin: 0 auto}
+        .box {
+            background: black;
+            margin: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://masonry.desandro.com/masonry.pkgd.min.js"></script>
+    <script>
+        $(function() {
+
+            // (1) div 태그 생성
+            // for(var i=0; i<100; i++) {
+            //     // div생성 후 클래스속성 추가하고 css 적용하고 body에 추가
+            //     $('<div></div>').addClass('box').attr('id', 'picture'+(i+1)).css({
+            //         width:100,
+            //         height:Math.floor(Math.random()*100)+50
+            //     }).appendTo('body');
+            // }
+            // $('body').masonry({
+            //     columnWidth: 110
+            // })
+
+
+            // (2) div가 아니라 img태그를 생성하고 이미지를 넣어줄 수도 있다
+            // 반복문 안에서 img태그 생성 + id속성 추가 + css속성 추가하면
+            // 이미지 배열을 하나 생성하고 
+            // 반복문을 통해 id선택자.attr(src, 배열의요소)하여 이미지src를 넣어준다
+
+            // var imageSources = [
+            //     "sample1.png",
+            //     "sample2.png",
+            //     "sample3.png",
+            //     "sample4.png",
+            //     "sample5.png"
+            // ];
+            var imageSources = [
+                `https://placekitten.com/200/220`,
+                `https://placekitten.com/200/320`,
+                `https://placekitten.com/200/220`,
+                `https://placekitten.com/200/420`,
+                `https://placekitten.com/200/120`,
+                `https://placekitten.com/200/220`,
+                `https://placekitten.com/200/420`,
+                `https://placekitten.com/200/220`,
+                `https://placekitten.com/200/320`,
+                `https://placekitten.com/200/220`,
+                `https://placekitten.com/200/420`,
+                `https://placekitten.com/200/120`,
+                `https://placekitten.com/200/220`,
+                `https://placekitten.com/200/420`,
+                `https://placekitten.com/200/220`,
+                `https://placekitten.com/200/320`,
+                `https://placekitten.com/200/220`,
+                `https://placekitten.com/200/420`,
+                `https://placekitten.com/200/120`,
+                `https://placekitten.com/200/220`,
+                `https://placekitten.com/200/420`
+            ];
+            for (var i = 0; i < imageSources.length; i++) {
+                // img 태그 생성 후 클래스 속성 추가하고 css 적용하고 body에 추가
+                $('<img>').addClass('box').attr('src', imageSources[i]).appendTo('body');
+            }
+            $('body').masonry({
+                columnWidth: 110
+            });
+
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

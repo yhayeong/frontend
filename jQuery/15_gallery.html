@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0918Mon 갤러리(이미지 슬라이드)</title>
+    <style>
+        div.item:nth-child(1) { background: blueviolet; }
+        div.item:nth-child(2) { background: pink; }
+        div.item:nth-child(3) { background: burlywood; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function() {
+
+            // 선택자: 속성이 data-role="slider"인...
+            var width = $('[data-role="slider"]').attr('data-width'); //500
+            var height = $('[data-role="slider"]').attr('data-height'); //300
+            var count = $('[data-role="slider"] div.item').length; //3
+            // console.log(width + ',' + height + ',' + count);
+
+            $('[data-role="slider"]').css({
+                position: 'relative',
+                /*  부모 요소가 자식 요소의 기준점이 됨 */
+                overflow: 'hidden',
+                width: width,
+                height: height
+            }).find('.container').css({
+                position: 'absolute',
+                /* 부모 요소를 기준으로 위치가 결정됨 */
+                width: count*width,
+                overflow: 'hidden'
+            }).find('.item').css({
+                width: width,
+                height: height,
+                float: 'left'
+            });
+
+
+            //버튼
+            var currentPage = 0;
+            // 슬라이더를 애니메이션으로 이동시키는 함수
+            var changePage = function() {
+                $('[data-role="slider"]>.container').animate({
+                    left: -currentPage*width
+                }, 500);
+            }
+
+            // 버튼 클릭시 처음과 마지막 페이지에서는 더 이상 슬라이딩하지 않고, 허용된 범위 내에서만 슬라이딩할 수 있게하기
+            $('#left-button').click(function() {
+                console.log("...left-button click")
+                if(currentPage>0) {
+                    currentPage = currentPage-1;
+                    changePage();
+                }
+                // 현재 페이지가 0보다 크면, 
+                // 즉 첫 번째 페이지가 아니면 왼쪽으로 슬라이드할 수 있으므로 이동하게함
+            })
+            $('#right-button').click(function() {
+                console.log("...right-button click")
+                if(currentPage<count-1) {
+                    currentPage = currentPage+1;
+                    changePage();
+                }
+                // 현재 페이지가 슬라이드 아이템의 마지막 페이지보다 작으면, 
+                // 즉 마지막 페이지가 아니면 오른쪽으로 슬라이드할 수 있으므로 이동하게함
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- container가 absolute이면 부모가 relative여야... -->
+    <div data-role="slider" data-width="500" data-height="300">
+        <!-- 컨테이너: 카드가 위치하는 자리 -->
+        <div class="container">
+            <!-- 아이템: 각 카드 -->
+            <div class="item">
+                <h1>1Lorem ipsum dolor sit amet</h1>
+                <p>1Lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+            <div class="item">
+                <h1>2Lorem ipsum dolor sit amet</h1>
+                <p>2Lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+            <div class="item">
+                <h1>3Lorem ipsum dolor sit amet</h1>
+                <p>3Lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+        </div>
+    </div>
+    <button id="left-button">≪</button>
+    <button id="right-button">≫</button>
+</body>
+</html>
